@@ -1,9 +1,11 @@
 <template>
-  <div>{{ todoItem.title }}</div>
-  <div>This will be the task description</div>
-  <div>This will be the task label</div>
-  <div>This will be the due date</div>
-  <div>This will be the task actions</div>
+  <div>
+    <div>{{ todoItem.title }}</div>
+    <div>This will be the task description</div>
+    <div>This will be the task label</div>
+    <div>This will be the due date</div>
+    <div>This will be the task actions</div>
+  </div>
 </template>
 
 <script>

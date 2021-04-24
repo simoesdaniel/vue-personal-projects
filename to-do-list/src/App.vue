@@ -1,10 +1,12 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/my-todos">Todo List</router-link> |
-    <router-link to="/auth">Auth</router-link>
-  </div>
-  <router-view />
+  <section>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/my-todos">Todo List</router-link> |
+      <router-link to="/auth">Auth</router-link>
+    </div>
+    <router-view />
+  </section>
 </template>
 <script>
 export default {

@@ -1,16 +1,18 @@
 <template>
   <div>
-    <form @submit.prevent="searchTask">
-      <input type="text" v-model="searchTerm" />
-      <button>Search</button>
-    </form>
+    <div>
+      <form @submit.prevent="searchTask">
+        <input type="text" v-model="searchTerm" />
+        <button>Search</button>
+      </form>
+    </div>
+    <div>
+      <button @click="showDialog">Add +</button>
+    </div>
+    <base-dialog @close="hideDialog" :open="dialogIsVisible">
+      <todo-new-item />
+    </base-dialog>
   </div>
-  <div>
-    <button @click="showDialog">Add +</button>
-  </div>
-  <base-dialog @close="hideDialog" :open="dialogIsVisible">
-    <todo-new-item />
-  </base-dialog>
 </template>
 
 <script>

@@ -1,6 +1,8 @@
 <template>
-  <the-login-form v-if="!loggedIn" />
-  <component :is="isLoggedIn" />
+  <div>
+    <the-login-form v-if="!loggedIn" />
+    <component :is="isLoggedIn" />
+  </div>
 </template>
 
 <script>

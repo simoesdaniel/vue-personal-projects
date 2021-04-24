@@ -3,8 +3,10 @@
     <div v-if="open" class="backdrop" @click="$emit('close')"></div>
     <transition name="modal">
       <dialog v-if="open" open>
-        <div>
-          <span>Add a new task</span>
+        <div class="py-5 border-b-1 border-gray-300">
+          <span class="text-lg text-light-blue-500 font-bold"
+            >Add a new task</span
+          >
         </div>
         <div>
           <slot></slot>
