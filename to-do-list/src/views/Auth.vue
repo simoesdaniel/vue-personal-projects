@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import TheLoginForm from "../components/auth/TheLoginForm";
-import TheRegisterForm from "../components/auth/TheRegisterForm";
-import Profile from "../components/Profile";
+import TheLoginForm from "../components/auth/TheLoginForm.vue";
+import TheRegisterForm from "../components/auth/TheRegisterForm.vue";
+import Profile from "../components/Profile.vue";
 import { mapGetters } from "vuex";
 export default {
   components: {

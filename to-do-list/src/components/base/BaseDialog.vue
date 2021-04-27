@@ -3,16 +3,19 @@
     <div v-if="open" class="backdrop" @click="$emit('close')"></div>
     <transition name="modal">
       <dialog v-if="open" open>
-        <div class="py-5 border-b-1 border-gray-300">
-          <span class="text-lg text-light-blue-500 font-bold"
+        <div class="flex flex-row pt-5 pb-2 border-b-1 border-gray-300">
+          <span class="flex-1 text-lg text-light-blue-500 font-bold"
             >Add a new task</span
           >
+          <div>
+            <button class="focus:outline-none" @click="$emit('close')">
+              <span class="material-icons"> close </span>
+            </button>
+          </div>
         </div>
+
         <div>
           <slot></slot>
-        </div>
-        <div>
-          <button @click="$emit('close')">Cancel</button>
         </div>
       </dialog>
     </transition>
@@ -21,7 +24,7 @@
 
 <script>
 export default {
-  emmits: ["close"],
+  emits: ["close"],
   props: ["open"],
 };
 </script>
@@ -38,7 +41,7 @@ export default {
 }
 dialog {
   position: fixed;
-  top: 30vh;
+  top: 10vh;
   width: 30rem;
   left: calc(50% - 15rem);
   margin: 0;

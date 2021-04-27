@@ -7,6 +7,8 @@ export default {
   state() {
     return {
       todoList: [],
+      loaded: false,
+      searchTerms: "",
     };
   },
   getters,

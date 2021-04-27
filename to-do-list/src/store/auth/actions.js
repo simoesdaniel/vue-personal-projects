@@ -21,14 +21,17 @@ export default {
     commit("setProfileData", {
       name: payload.userData.name,
       email: payload.userData.email,
+      userId: payload.auth.localId,
     });
   },
   logout({ commit }) {
+    console.log("logging out...");
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
     localStorage.removeItem("tokenExpiration");
     localStorage.removeItem("name");
     localStorage.removeItem("email");
+    localStorage.removeItem("displayTypeSelected");
 
     clearTimeout(timer);
 
@@ -75,7 +78,7 @@ export default {
 
     if (token && userId && name && email) {
       commit("setToken", token);
-      commit("setProfileData", { name, email });
+      commit("setProfileData", { name, email, userId });
     }
   },
   autoLogout({ dispatch }) {

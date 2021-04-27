@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TodoList from "../components/todoComponents/TodoList";
+import TodoList from "../components/todoComponents/TodoList.vue";
 import { mapGetters } from "vuex";
 export default {
   components: { TodoList },

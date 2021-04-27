@@ -35,11 +35,18 @@ const routes = [
           import(/* webpackChunkName: "about" */ "../views/MyTodos.vue"),
       },
     ],
+    beforeEnter: (to, from, next) => {
+      if (localStorage.getItem("token")) {
+        next();
+      } else {
+        next({ name: "Auth" });
+      }
+    },
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 

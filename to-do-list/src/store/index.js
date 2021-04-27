@@ -5,5 +5,6 @@ export default createStore({
   state: {},
   mutations: {},
   actions: {},
+  getters: {},
   modules: { auth: AuthModule, todos: TodosModule },
 });
